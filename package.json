@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/arlac77/swim-playground/issues"
   },
-  "homepage": "https://github.com/arlac77/swim-playground#readme"
+  "homepage": "https://github.com/arlac77/swim-playground#readme",
+  "dependencies": {
+    "swim": "^0.5.0"
+  }
 }
