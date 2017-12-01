@@ -1,7 +1,7 @@
 const Swim = require('swim');
 const opts = {
   local: {
-    host: '10.31.1.191:11000',
+    host: '172.29.248.124:11000',
     meta: { application: 'info' } // optional
   },
   codec: 'msgpack', // optional
@@ -16,7 +16,7 @@ const opts = {
   preferCurrentMeta: true // optional
 };
 const swim = new Swim(opts);
-const hostsToJoin = ['10.31.1.192:11000', '10.31.1.193:11000'];
+const hostsToJoin = ['172.29.248.124:11000', '172.29.248.124:11001'];
 
 swim.bootstrap(hostsToJoin, err => {
   if (err) {
@@ -31,12 +31,16 @@ swim.bootstrap(hostsToJoin, err => {
   console.log(swim.checksum());
 
   // change on membership, e.g. new node or node died/left
-  swim.on(Swim.EventType.Change, function onChange(update) {});
+  swim.on(Swim.EventType.Change, update => {
+    console.log(update);
+  });
   // update on membership, e.g. node recovered or update on meta data
-  swim.on(Swim.EventType.Update, function onUpdate(update) {});
+  swim.on(Swim.EventType.Update, update => {
+    console.log(update);
+  });
 
   // shutdown
-  swim.leave();
+  //swim.leave();
 });
 
 /*
