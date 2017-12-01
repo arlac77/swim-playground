@@ -1,0 +1,19 @@
+{
+  "name": "swim-playground",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arlac77/swim-playground.git"
+  },
+  "author": "Markus Felten <markus.felten@gmx.de>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/arlac77/swim-playground/issues"
+  },
+  "homepage": "https://github.com/arlac77/swim-playground#readme"
+}
